@@ -31,7 +31,8 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&mo 2>, <&tog 2>;
-  // Momentary on single tap, toggle on double tap
+
+            // Momentary on single tap, toggle on double tap
         };
     };
 
@@ -71,10 +72,10 @@
 
             display-name = "Raise";
             bindings = <
-&trans  &kp EXCL  &kp AT   &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS        &kp KP_MULTIPLY  &kp LPAR   &kp RPAR  &trans
-&trans  &kp HOME  &kp END  &trans    &trans    &trans       &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW     &kp RIGHT  &trans    &trans
-&trans  &trans    &trans   &trans    &trans    &trans       &kp PG_DN  &kp PG_UP       &trans           &trans     &trans    &trans
-                           &trans    &trans    &trans       &trans     &trans          &trans
+&trans  &kp EXCL  &kp AT   &kp HASH  &kp DLLR       &kp PRCNT           &kp CARET  &kp AMPS        &kp KP_MULTIPLY  &kp LPAR   &kp RPAR  &trans
+&trans  &kp HOME  &kp END  &trans    &kp LESS_THAN  &kp GREATER_THAN    &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW     &kp RIGHT  &trans    &trans
+&trans  &trans    &trans   &trans    &trans         &trans              &kp PG_DN  &kp PG_UP       &trans           &trans     &trans    &trans
+                           &trans    &trans         &trans              &trans     &trans          &trans
             >;
         };
 

@@ -40,9 +40,12 @@
         default_layer {
             display-name = "Base";
             bindings = <
-                // Row 1
+                /* Row 1 */
                 &kp TAB      &kp Q       &kp W       &kp E        &kp R        &kp T      &kp Y       &kp U       &kp I        &kp O       &kp P        &sl 4
-                // Row 2 (Home row with mod behavior from Base)
+                /* Row 2 (Home row with mod behavior from Base)
+                   Positions 2–5 use: LEFT_GUI, LEFT_ALT, LEFT_SHIFT, LCTRL;
+                   Positions 8–11 use: RCTRL, RIGHT_SHIFT, RIGHT_ALT, RIGHT_GUI.
+                   The tap key is the original key for that layer. */
                 &kp ESCAPE
                 &custom_tap_hold LEFT_GUI A
                 &custom_tap_hold LEFT_ALT S
@@ -55,33 +58,35 @@
                 &custom_tap_hold RIGHT_ALT L
                 &custom_tap_hold RIGHT_GUI SEMI
                 &kp SQT
-                // Row 3
+                /* Row 3 */
                 &kp LSHFT    &kp Z       &kp X       &kp C        &kp V        &kp B      &kp N       &kp M       &kp COMMA  &kp DOT    &kp FSLH     &kp RSHFT
-                                                  &mo 3       &kp SPACE   &mo 1      &layer_td   &kp ENTER   &kp BACKSPACE
+                                                                  &mo 3       &kp SPACE   &mo 1      &layer_td   &kp ENTER   &kp BACKSPACE
             >;
         };
 
         lower_layer {
             display-name = "Lower";
             bindings = <
-                // Row 1 (Symbol keys remain as originally)
+                /* Row 1 (Symbols unchanged) */
                 &trans     &trans     &kp RIGHT_BRACE     &kp RIGHT_BRACKET     &kp RIGHT_PARENTHESIS     &kp PIPE     &kp NON_US_BACKSLASH     &kp UNDERSCORE     &kp MINUS    &trans     &trans     &trans
-                // Row 2 (Home row: use original tap keys with Base’s hold behavior)
+                /* Row 2 (Home row)
+                   Original tap keys (from this layer) are preserved.
+                   Transparent keys are now given as TRANS. */
                 &trans
-                &custom_tap_hold LEFT_GUI &trans
-                &custom_tap_hold LEFT_ALT &kp LEFT_BRACE
-                &custom_tap_hold LEFT_SHIFT &kp LEFT_BRACKET
-                &custom_tap_hold LCTRL &kp LPAR
+                &custom_tap_hold LEFT_GUI TRANS
+                &custom_tap_hold LEFT_ALT LEFT_BRACE
+                &custom_tap_hold LEFT_SHIFT LEFT_BRACKET
+                &custom_tap_hold LCTRL LPAR
                 &kp TILDE
                 &kp SLASH
-                &custom_tap_hold RCTRL &kp EQUAL
-                &custom_tap_hold RIGHT_SHIFT &kp PLUS
-                &custom_tap_hold RIGHT_ALT &trans
-                &custom_tap_hold RIGHT_GUI &trans
+                &custom_tap_hold RCTRL EQUAL
+                &custom_tap_hold RIGHT_SHIFT PLUS
+                &custom_tap_hold RIGHT_ALT TRANS
+                &custom_tap_hold RIGHT_GUI TRANS
                 &trans
-                // Row 3
+                /* Row 3 */
                 &trans     &trans     &trans     &trans     &kp DOUBLE_QUOTES    &kp SINGLE_QUOTE    &kp QUESTION    &kp SEMICOLON    &kp COLON    &trans     &trans     &trans
-                // Bottom row
+                /* Bottom row */
                 &trans     &trans     &trans     &trans     &trans     &trans
             >;
         };
@@ -89,24 +94,26 @@
         raise_layer {
             display-name = "Raise";
             bindings = <
-                // Row 1: Top row as numbers so that Shift produces symbols
+                /* Row 1: Top row as numbers (so Shift produces symbols) */
                 &trans     &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &trans
-                // Row 2 (Home row: use original raise tap keys with Base’s hold behavior)
-                &kp ESCAPE
-                &custom_tap_hold LEFT_GUI &kp HOME
-                &custom_tap_hold LEFT_ALT &kp END
-                &custom_tap_hold LEFT_SHIFT &trans
-                &custom_tap_hold LCTRL &trans
-                &kp trans
-                &kp LEFT
-                &custom_tap_hold RCTRL &kp DOWN_ARROW
-                &custom_tap_hold RIGHT_SHIFT &kp UP_ARROW
-                &custom_tap_hold RIGHT_ALT &kp RIGHT
-                &custom_tap_hold RIGHT_GUI &trans
+                /* Row 2 (Home row)
+                   Original tap keys for this layer are preserved.
+                   Use hold mods from Base; where the original key was transparent, use TRANS. */
                 &trans
-                // Row 3
+                &custom_tap_hold LEFT_GUI HOME
+                &custom_tap_hold LEFT_ALT END
+                &custom_tap_hold LEFT_SHIFT TRANS
+                &custom_tap_hold LCTRL TRANS
+                &trans
+                &kp LEFT
+                &custom_tap_hold RCTRL DOWN_ARROW
+                &custom_tap_hold RIGHT_SHIFT UP_ARROW
+                &custom_tap_hold RIGHT_ALT RIGHT
+                &custom_tap_hold RIGHT_GUI TRANS
+                &trans
+                /* Row 3 */
                 &trans     &trans     &trans     &trans     &trans     &trans     &kp PG_DN   &kp PG_UP   &trans     &trans     &trans     &trans
-                // Bottom row
+                /* Bottom row */
                 &trans     &trans     &trans     &trans     &trans     &trans
             >;
         };
@@ -114,39 +121,40 @@
         layer_3 {
             display-name = "Num";
             bindings = <
-                // Row 1
+                /* Row 1 */
                 &trans     &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &trans
-                // Row 2 (Home row: original Num tap keys with Base’s hold behavior)
+                /* Row 2 (Home row)
+                   Original tap keys are preserved; use Base’s hold mods. */
                 &trans
-                &custom_tap_hold LEFT_GUI &kp F1
-                &custom_tap_hold LEFT_ALT &kp F2
-                &custom_tap_hold LEFT_SHIFT &kp F3
-                &custom_tap_hold LCTRL &kp F4
+                &custom_tap_hold LEFT_GUI F1
+                &custom_tap_hold LEFT_ALT F2
+                &custom_tap_hold LEFT_SHIFT F3
+                &custom_tap_hold LCTRL F4
                 &kp F5
                 &kp F6
-                &custom_tap_hold RCTRL &kp F7
-                &custom_tap_hold RIGHT_SHIFT &kp F8
-                &custom_tap_hold RIGHT_ALT &kp F9
-                &custom_tap_hold RIGHT_GUI &kp F10
+                &custom_tap_hold RCTRL F7
+                &custom_tap_hold RIGHT_SHIFT F8
+                &custom_tap_hold RIGHT_ALT F9
+                &custom_tap_hold RIGHT_GUI F10
                 &trans
-                // Row 3
-                &trans     &trans     &trans     &trans     &trans     &kp F11    &kp F12    &trans     &trans     &trans     &trans     &trans
-                // Bottom row
+                /* Row 3 */
+                &trans     &trans     &trans     &trans     &kp F11    &kp F12    &trans     &trans     &trans     &trans     &trans     &trans
+                /* Bottom row */
                 &to 0      &trans     &trans     &to 4      &trans     &trans
             >;
         };
 
         layer_4 {
-            // Bluetooth control layer remains unchanged.
+            /* Bluetooth control layer remains unchanged. */
             display-name = "BT";
             bindings = <
-                // Row 1
+                /* Row 1 */
                 &trans         &trans         &trans         &trans         &trans         &trans          &trans         &trans        &trans         &trans         &trans         &trans
-                // Row 2
+                /* Row 2 */
                 &trans         &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4    &bt BT_PRV     &trans       &trans        &bt BT_NXT    &trans         &trans
-                // Row 3
+                /* Row 3 */
                 &bt BT_CLR     &trans         &trans         &trans         &trans         &out OUT_TOG   &trans         &trans        &trans         &trans         &trans         &trans
-                // Bottom row
+                /* Bottom row */
                 &to 0          &trans         &trans         &to 3         &trans         &trans
             >;
         };

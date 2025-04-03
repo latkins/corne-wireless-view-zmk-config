@@ -121,8 +121,8 @@
         layer_3 {
             display-name = "Num";
             bindings = <
-                /* Row 1 */
-                &trans     &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &trans
+                /* Row 1: Top row now replaced with F-keys (F1–F12) */
+                &kp F1    &kp F2    &kp F3    &kp F4    &kp F5    &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &kp F11   &kp F12
                 /* Row 2 (Home row)
                    Original tap keys are preserved; use Base’s hold mods. */
                 &trans

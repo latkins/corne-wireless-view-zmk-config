@@ -50,10 +50,10 @@
         lower_layer {
             display-name = "Symbols";
             bindings = <
-&trans  &trans  &kp RIGHT_BRACE                       &kp RIGHT_BRACKET                    &kp RIGHT_PARENTHESIS                         &kp PIPE            &kp BACKSLASH  &kp UNDERSCORE                &kp MINUS                    &trans                             &trans  &trans
-&trans  &trans  &custom_tap_hold LEFT_ALT LEFT_BRACE  &custom_tap_hold LCTRL LEFT_BRACKET  &custom_tap_hold LEFT_SHIFT LEFT_PARENTHESIS  &kp TILDE           &kp SLASH      &custom_tap_hold RCTRL EQUAL  &custom_tap_hold RCTRL PLUS  &custom_tap_hold RIGHT_SHIFT PLUS  &trans  &trans
-&trans  &trans  &trans                                &trans                               &kp DOUBLE_QUOTES                             &kp SINGLE_QUOTE    &kp QUESTION   &kp SEMICOLON                 &kp COLON                    &trans                             &trans  &trans
-                                                      &trans                               &trans                                        &trans              &trans         &trans                        &trans
+&trans  &trans  &kp RIGHT_BRACE                       &kp RIGHT_BRACKET                         &kp RIGHT_PARENTHESIS                    &kp PIPE            &kp BACKSLASH  &kp UNDERSCORE                &kp MINUS                          &trans                           &trans  &trans
+&trans  &trans  &custom_tap_hold LEFT_ALT LEFT_BRACE  &custom_tap_hold LEFT_SHIFT LEFT_BRACKET  &custom_tap_hold LCTRL LEFT_PARENTHESIS  &kp TILDE           &kp SLASH      &custom_tap_hold RCTRL EQUAL  &custom_tap_hold RIGHT_SHIFT PLUS  &custom_tap_hold RIGHT_ALT PLUS  &trans  &trans
+&trans  &trans  &trans                                &trans                                    &kp DOUBLE_QUOTES                        &kp SINGLE_QUOTE    &kp QUESTION   &kp SEMICOLON                 &kp COLON                          &trans                           &trans  &trans
+                                                      &trans                                    &trans                                   &trans              &trans         &trans                        &trans
             >;
         };
 
